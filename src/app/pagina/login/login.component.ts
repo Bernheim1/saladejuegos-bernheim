@@ -26,8 +26,8 @@ export class LoginComponent implements OnInit {
 
     this.usuario.login(this.email, this.password)
     .then((respuesta : any) => {
-        let aux = this.email + ' - ' + this.password;
-        this.usuario.enviarLog(Date.now(), aux)
+        this.usuario.currentUser = this.email;
+        this.usuario.enviarLog(Date.now().toString(), this.email)
         this.router.navigate(['home']);
     })
     .catch((error) => {

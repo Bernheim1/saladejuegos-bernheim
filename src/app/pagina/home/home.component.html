@@ -11,9 +11,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Log Out</a>
+            <a class="nav-link" (click)="singOut()">Log Out</a>
           </li>
         </ul>
+        <a class="nav-link disabled" href="#">Bienvenido: {{this.usuario.currentUser}}</a>
       </div>
     </nav>
 

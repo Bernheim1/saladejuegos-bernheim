@@ -9,6 +9,7 @@ import { LoginComponent } from './pagina/login/login.component';
 import { HomeComponent } from './pagina/home/home.component';
 import { QuiensoyComponent } from './pagina/quiensoy/quiensoy.component';
 import { ErrorComponent } from './pagina/error/error.component';
+import { RegistroComponent } from './pagina/registro/registro.component';
 
 //FIREBASE
 import { environment } from '../environments/environment';
@@ -19,7 +20,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 //TOAST
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { RegistroComponent } from './pagina/registro/registro.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { RegistroComponent } from './pagina/registro/registro.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 10000,
+      timeOut: 5000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
