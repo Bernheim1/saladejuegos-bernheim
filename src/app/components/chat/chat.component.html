@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header text-center">
+                    <span>Chat Box</span>
+                </div>
+                <div class="card-body chat-care">
+                    <ul *ngFor="let item of items | async" class="chat">
+                        <li *ngIf="item.name != this.user.currentUser" class="agent clearfix">
+                            <div class="chat-body clearfix">
+                                <div class="header clearfix">
+                                    <strong class="primary-font">{{item.name}}</strong> <small class="left text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>{{item.time}}</small>
+                                </div>
+                                <p>
+                                    {{item.message}}
+                                </p>
+                            </div>
+                        </li>
+                        <li *ngIf="item.name == this.user.currentUser" class="admin clearfix">
+                            <div class="chat-body clearfix">
+                                <div class="header clearfix">
+                                    <strong class="right primary-font">{{item.name}}</strong>
+                                    <small class="right text-muted"><span class="glyphicon glyphicon-time"></span>{{item.time}}</small>
+                                </div>
+                                <p>
+                                    {{item.message}}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" [(ngModel)]="mensaje"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" (click)="enviarMensaje()">
+                                Enviar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

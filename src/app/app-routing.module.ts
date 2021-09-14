@@ -6,7 +6,7 @@ import { HomeComponent } from './pagina/home/home.component';
 import { QuiensoyComponent } from './pagina/quiensoy/quiensoy.component';
 import { ErrorComponent } from './pagina/error/error.component';
 import { RegistroComponent } from './pagina/registro/registro.component';
-
+import { ChatComponent } from './components/chat/chat.component';
 
 const routes: Routes = [
 
@@ -15,7 +15,9 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'QuienSoy', component: QuiensoyComponent},
     {path: 'registro', component: RegistroComponent},
-    {path: '**', component: ErrorComponent}
+    {path: 'chat', component: ChatComponent},
+    {path: 'saladejuegos', loadChildren: () => import('./juegos/juegos.module').then(m => m.JuegosModule) },
+    {path: '**', component: ErrorComponent},
 ];
 
 @NgModule({

@@ -10,6 +10,7 @@ import { HomeComponent } from './pagina/home/home.component';
 import { QuiensoyComponent } from './pagina/quiensoy/quiensoy.component';
 import { ErrorComponent } from './pagina/error/error.component';
 import { RegistroComponent } from './pagina/registro/registro.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 //FIREBASE
 import { environment } from '../environments/environment';
@@ -20,6 +21,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 //TOAST
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { AhorcadoComponent } from './components/juegos/ahorcado/ahorcado.component';
+import { MayorMenorComponent } from './components/juegos/mayor-menor/mayor-menor.component';
 
 
 @NgModule({
@@ -30,6 +33,9 @@ import { ToastrModule } from 'ngx-toastr';
     QuiensoyComponent,
     ErrorComponent,
     RegistroComponent,
+    ChatComponent,
+    AhorcadoComponent,
+    MayorMenorComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,7 @@ import { ToastrModule } from 'ngx-toastr';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
-
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

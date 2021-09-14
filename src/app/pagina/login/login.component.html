@@ -1,3 +1,9 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#" >Sala de juegos</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
 <section class="vh-100">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -21,16 +27,16 @@
               </div>
 
 
-              <button class="btn btn-outline-light btn-lg px-5" (click)="login()">Login</button>
+              <button class="btn btn-outline-light btn-lg px-5" (click)="login()">Ingresar</button>
               <br>
               <br>
-              <button class="btn btn-outline-light btn-lg px-5" (click)="loginUsuarioValido()">Usuario test</button>
+              <button class="btn btn-outline-light btn-lg px-5" (click)="loginUsuarioValido()">Usuario valido</button>
 
 
             </div>
 
             <div>
-              <p class="mb-0">No tiene cuenta? <a href="#!" class="text-white-50 fw-bold" [routerLink]="['../registro']">Registrarse</a></p>
+              <p class="mb-0">No tiene cuenta? <a href="#!" class="text-white-50 fw-bold" [routerLink]="['/registro']">Registrarse</a></p>
             </div>
 
           </div>

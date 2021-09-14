@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+
+<div class="row">
+    <div class="col text-center">
+        <h3>Intentos <small>{{intentos}}/6</small></h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <div *ngFor="let item of longitudPalabra" class="d-inline">
+            <h1 class="d-inline p-2">{{item}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <button *ngFor="let letra of letras" class="btn btn-primary" (click)="letraSeleccionada(letra)"> {{ letra }} </button>
+    </div>
+</div>
+
+<div> 
+    <img src='../../../../assets/images/ahorcado/ahorcado-{{this.imagen}}.png'>
+</div>
