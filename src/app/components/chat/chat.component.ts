@@ -20,7 +20,6 @@ export class ChatComponent implements OnInit {
 
   enviarMensaje(){
     this.chat.enviarMensaje(this.mensaje, this.user.currentUser)
-    console.log(this.user.currentUser);
   }
 
   ngOnInit(): void {

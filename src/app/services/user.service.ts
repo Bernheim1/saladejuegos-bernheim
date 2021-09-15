@@ -11,8 +11,13 @@ import { Router } from '@angular/router';
 export class UserService {
 
   currentUser: string = '';
+  isLoggedIn : any;
 
-  constructor(private firesotre : AngularFirestore, private auth : AngularFireAuth, private router : Router) { }
+  constructor(private firesotre : AngularFirestore, private auth : AngularFireAuth, private router : Router) { 
+    this.auth.authState.subscribe((user) => {
+      this.isLoggedIn = user;
+    })
+  }
 
   login(email : any, password : any){
     return this.auth.signInWithEmailAndPassword(email, password);
