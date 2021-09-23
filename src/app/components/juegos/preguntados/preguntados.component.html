@@ -1,0 +1,43 @@
+
+<br>
+<br>
+<br>
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card bg-dark" style="border-radius: 15px;">
+				<h5 class="card-header text-white" style="font-size: 40px;">
+					{{titulo}}
+				</h5>
+				<div class="card-body">
+                    <img src="../../../../assets/images/prueba-preguntados.png" alt="" style="width: 100%; height: 100%;">
+					<p class="card-text text-center text-white" style="font-size: 30px">
+						{{pregunta}}
+					</p>
+				</div>
+                <div class="row">
+                    <div class="col-md-12">
+                         
+                        <button type="button" class="btn btn-warning btn-block text-white" style="font-size: 30px; border-radius: 15px;"(click)="validarRespuesta(1)">
+                            {{opcion1}}
+                        </button> 
+                        <button type="button" class="btn btn-warning btn-block text-white" style="font-size: 30px; border-radius: 15px;" (click)="validarRespuesta(2)">
+                            {{opcion2}}
+                        </button> 
+                        <button type="button" class="btn btn-warning btn-block text-white" style="font-size: 30px; border-radius: 15px;" (click)="validarRespuesta(3)">
+                            {{opcion3}}
+                        </button> 
+                        <button type="button" class="btn btn-warning btn-block text-white" style="font-size: 30px; border-radius: 15px;" (click)="validarRespuesta(4)">
+                            {{opcion4}}
+                        </button>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="fullscreen-bg"></div>

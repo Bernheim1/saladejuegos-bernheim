@@ -14,7 +14,7 @@ const routes: Routes = [
     {path: '', redirectTo: 'login', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
     {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
-    {path: 'QuienSoy', component: QuiensoyComponent},
+    {path: 'quiensoy', component: QuiensoyComponent},
     {path: 'registro', component: RegistroComponent},
     {path: 'chat', component: ChatComponent, canActivate: [AuthGuard]},
     {path: 'saladejuegos', loadChildren: () => import('./juegos/juegos.module').then(m => m.JuegosModule), canActivate: [AuthGuard] },
@@ -26,3 +26,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

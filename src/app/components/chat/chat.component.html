@@ -12,32 +12,33 @@
 <div class="container">
   <div class="row">
         <div class="col-md-6 mx-auto">
-            <div class="card">
+            <div class="card" style="width: 100%; height: 80vh">
                 <div class="card-header text-center">
-                    <span>Chat Box</span>
+                    <span>Sala de chat</span>
                 </div>
                 <div class="card-body chat-care">
                     <ul *ngFor="let item of items | async" class="chat">
                         <li *ngIf="item.name != this.user.currentUser" class="agent clearfix">
                             <div class="chat-body clearfix">
                                 <div class="header clearfix">
-                                    <strong class="primary-font">{{item.name}}</strong> <small class="left text-muted">
-                                        <span class="glyphicon glyphicon-time"></span>{{item.time}}</small>
+                                    <strong class="primary-font">{{item.name}}</strong> 
                                 </div>
-                                <p>
+                                <p class="text-white">
                                     {{item.message}}
                                 </p>
+                                <small class="right text-warning">
+                                    <span class="glyphicon glyphicon-time"></span>{{item.time}}</small>
                             </div>
                         </li>
                         <li *ngIf="item.name == this.user.currentUser" class="admin clearfix">
                             <div class="chat-body clearfix">
                                 <div class="header clearfix">
                                     <strong class="right primary-font">{{item.name}}</strong>
-                                    <small class="right text-muted"><span class="glyphicon glyphicon-time"></span>{{item.time}}</small>
                                 </div>
-                                <p>
+                                <p class="text-white">
                                     {{item.message}}
                                 </p>
+                                <small class="left text-warning"><span class="glyphicon glyphicon-time"></span>{{item.time}}</small>
                             </div>
                         </li>
                     </ul>
@@ -46,7 +47,7 @@
                     <div class="input-group">
                         <input id="btn-input" type="text" class="form-control input-sm" [(ngModel)]="mensaje"/>
                         <span class="input-group-btn">
-                            <button class="btn btn-primary" (click)="enviarMensaje()">
+                            <button class="btn btn-warning" (click)="enviarMensaje()">
                                 Enviar</button>
                         </span>
                     </div>
@@ -55,3 +56,4 @@
         </div>
     </div>
 </div>
+<div class="fullscreen-bg"></div>

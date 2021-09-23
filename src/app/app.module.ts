@@ -23,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AhorcadoComponent } from './components/juegos/ahorcado/ahorcado.component';
 import { MayorMenorComponent } from './components/juegos/mayor-menor/mayor-menor.component';
+import { JuegopropioComponent } from './components/juegos/juegopropio/juegopropio.component';
+import { PreguntadosComponent } from './components/juegos/preguntados/preguntados.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { MayorMenorComponent } from './components/juegos/mayor-menor/mayor-menor
     ChatComponent,
     AhorcadoComponent,
     MayorMenorComponent,
+    JuegopropioComponent,
+    PreguntadosComponent,
   ],
   imports: [
     BrowserModule,

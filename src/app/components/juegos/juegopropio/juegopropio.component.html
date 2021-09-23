@@ -1,0 +1,36 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row justify-content-center" style="row-gap: 15px;">
+
+      <div class="col-md-6" >
+        <button class="btn btn-primary btn-lg px-5 w-100" style="height: 200px" [ngClass]="{'btn-warning': this.ArribaIzquierda}" (click)="click(0)"></button>
+      </div>
+  
+      <div class="col-md-6">
+        <button class="btn btn-primary btn-lg px-5 w-100" style="height: 200px" [ngClass]="{'btn-warning': this.ArribaDerecha}" (click)="click(1)"></button>
+      </div>
+
+      <div class="col-md-6" >
+        <button class="btn btn-primary btn-lg px-5 w-100" style="height: 200px" [ngClass]="{'btn-warning': this.AbajoIzquierda}" (click)="click(2)"></button>
+      </div>
+  
+      <div class="col-md-6">
+        <button class="btn btn-primary btn-lg px-5 w-100" style="height: 200px" [ngClass]="{'btn-warning': this.AbajoDerecha}" (click)="click(3)"></button>
+      </div>
+
+      <div class="col-md-12">
+        <button class="btn btn-danger btn-lg px-5 w-100" style="font-size: 40px" (click)="start()">Jugar</button>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4 bg-light" style="width: 100%; text-align: center; font-size: 60px; border: 4px solid; border-radius: 15px; ">
+        {{puntaje}}
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <div class="fullscreen-bg"></div>

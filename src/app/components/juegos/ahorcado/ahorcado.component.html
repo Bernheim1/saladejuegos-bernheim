@@ -2,26 +2,40 @@
 <br>
 <br>
 
-<div class="row">
-    <div class="col text-center">
-        <h3>Intentos <small>{{intentos}}/6</small></h3>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col text-center">
-        <div *ngFor="let item of longitudPalabra" class="d-inline">
-            <h1 class="d-inline p-2">{{item}}</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3 style="color: #fff;">Intentos <small>{{intentos}}/6</small></h3>
         </div>
     </div>
-</div>
-
-<div class="row">
-    <div class="col text-center">
-        <button *ngFor="let letra of letras" class="btn btn-primary" (click)="letraSeleccionada(letra)"> {{ letra }} </button>
+    
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div *ngFor="let item of longitudPalabra" class="d-inline">
+                <h1 class="d-inline p-2" style="color: #fff;">{{item}}</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 text-center">
+                <button *ngFor="let letra of letras" class="btn btn-primary" (click)="letraSeleccionada(letra)"> {{ letra }} </button>
+        </div>
+    
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card bg-light" style="border-radius: 15px; width: 500px; height: 500px; margin-top: 50px"> 
+                <img src='../../../../assets/images/ahorcado/ahorcado-{{this.imagen}}.png' style="height: 100%; width: 100%;">
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    
     </div>
 </div>
 
-<div> 
-    <img src='../../../../assets/images/ahorcado/ahorcado-{{this.imagen}}.png'>
-</div>
+
+
+<div class="fullscreen-bg"></div>

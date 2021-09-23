@@ -13,4 +13,10 @@ export class UtilidadesService {
     this.toastr.error(mensaje, titulo);
 
   }
+
+  mostrarToastSuccess(titulo : string, mensaje : string){
+
+    this.toastr.success(mensaje, titulo);
+
+  }
 }

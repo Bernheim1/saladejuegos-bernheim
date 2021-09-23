@@ -19,7 +19,8 @@ export class ChatComponent implements OnInit {
   }
 
   enviarMensaje(){
-    this.chat.enviarMensaje(this.mensaje, this.user.currentUser)
+    this.chat.enviarMensaje(this.mensaje, this.user.currentUser);
+    this.mensaje = '';
   }
 
   ngOnInit(): void {

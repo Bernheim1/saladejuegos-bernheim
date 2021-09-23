@@ -3,27 +3,50 @@
 <br>
 <br>
 
-<div>
-    <div class="row d-flex justify-content-center h-100 text-center">
-        <h1 style="font-size: 100px">{{puntos}}</h1>
-    </div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6" style="margin: 0 0 15px 0; height: 50vh">
+			<div class="card bg-dark h-100">
+				<div class="card-body">
+					<p class="card-text text-white text-center" style="font-size: 200px">
+						{{numAnterior}}
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6" style="margin: 0 0 15px 0; height: 50vh">
+			<div class="card bg-dark h-100">
+				<div class="card-body">
+					<p class="card-text text-white text-center" style="font-size: 200px">
+						?
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6" style="height: 7vh">
+			 
+			<button type="button" class="btn btn-success btn-block h-100" (click)="seleccionadoMenor()">
+				Menor
+			</button>
+		</div>
+		<div class="col-md-6">
+			 
+			<button type="button" class="btn btn-block btn-danger h-100" (click)="seleccionadoMayor()">
+				Mayor
+			</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4" style="margin: 15px 0 0 0;">
+            <p class="text-white text-center" style="font-size: 100px; border: 3px solid; border-radius: 1rem;">{{puntos}}</p>
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
 </div>
-<div>
-    <div class="row d-flex justify-content-center h-100 text-center">
-        <div class="col-6 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-dark text-white" style="border-radius: 1rem; text-align: center; height: 65vh;">
-           <h1 style="font-size: 200px">{{numAnterior}}</h1>
-        </div>
-        </div>
-        <div class="col-6 col-md-8 col-lg-6 col-xl-5">
-            <div class="card bg-dark text-white" style="border-radius: 1rem; text-align: center; height: 65vh">
-               <h1 style="font-size: 200px">?</h1>
-            </div>
-            </div>
-</div>
-<div>
-    <div class="row d-flex justify-content-center h-100">
-        <button class="btn btn-success btn-lg px-5" (click)="seleccionadoMenor()">Menor</button>
-        <button class="btn btn-danger btn-lg px-5" (click)="seleccionadoMayor()">Mayor</button>
-    </div>
-</div>
+
+<div class="fullscreen-bg"></div>
