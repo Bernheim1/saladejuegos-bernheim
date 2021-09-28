@@ -81,7 +81,7 @@ export class PreguntadosComponent implements OnInit {
     switch (this.contador){
       case 1:
           this.pais = this.flags[0];
-          this.imgPregunta = this.pais.flags[1];
+          this.imgPregunta = this.pais.flag;
           this.titulo = this.arrPregunta1[0];
           this.pregunta = this.arrPregunta1[1];
           this.opcion1 = this.arrPregunta1[2];
@@ -92,7 +92,7 @@ export class PreguntadosComponent implements OnInit {
         break;
       case 2: 
           this.pais = this.flags[1];
-          this.imgPregunta = this.pais.flags[1];
+          this.imgPregunta = this.pais.flag;
           this.titulo = this.arrPregunta2[0];
           this.pregunta = this.arrPregunta2[1];
           this.opcion1 = this.arrPregunta2[2];
@@ -103,7 +103,7 @@ export class PreguntadosComponent implements OnInit {
         break;
       case 3: 
           this.pais = this.flags[2];
-          this.imgPregunta = this.pais.flags[1];
+          this.imgPregunta = this.pais.flag;
           this.titulo = this.arrPregunta3[0];
           this.pregunta = this.arrPregunta3[1];
           this.opcion1 = this.arrPregunta3[2];
@@ -114,7 +114,7 @@ export class PreguntadosComponent implements OnInit {
         break;
       case 4: 
           this.pais = this.flags[3];
-          this.imgPregunta = this.pais.flags[1];
+          this.imgPregunta = this.pais.flag;
           this.titulo = this.arrPregunta4[0];
           this.pregunta = this.arrPregunta4[1];
           this.opcion1 = this.arrPregunta4[2];
@@ -125,7 +125,7 @@ export class PreguntadosComponent implements OnInit {
         break;
       case 5: 
           this.pais = this.flags[4];
-          this.imgPregunta = this.pais.flags[1];
+          this.imgPregunta = this.pais.flag;
           this.titulo = this.arrPregunta5[0];
           this.pregunta = this.arrPregunta5[1];
           this.opcion1 = this.arrPregunta5[2];
